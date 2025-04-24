@@ -1,7 +1,7 @@
 //LAB TASK 2-2
 NetAddr.langPort
 
-// OSCFunc.trace(true, true)
+ OSCFunc.trace(true, true)
 // OSCFunc.trace(false)
 (
 
@@ -45,6 +45,13 @@ NetAddr.langPort
     ~pan = OSCFunc({ |msg, time, addr, recPort|
        	~note.panAngle_(~panSpec.map(msg[1]))
     }, '/1/fader2', ~iPhone);
+	 ~decay = OSCFunc({ |msg, time, addr, recPort|
+		~note.decayTime_(~decaySpec.map(msg[1]))
+    }, '/ /1/rotary1', ~iPhone);
+	~loop = OSCFunc({ |msg, time, addr, recPort|
+		~note.loop_(~loopSpec.map(msg[1]))
+		 }, '/ /1/rotary2', ~iPhone);
+
 
 	/*~midiRate = OSCFunc.new({ |val, num, chan, src|
 		~note.rate_(~rateSpec.map(val.linlin(0, 127, 0, 1)))
