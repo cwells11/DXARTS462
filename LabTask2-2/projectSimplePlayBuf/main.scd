@@ -16,6 +16,7 @@ NetAddr.langPort
 		CtkBuffer(pathName.fullPath).load
 	};
 	~rateSpec = ControlSpec(0.25, 4.0, 'exp'); //(changed from -100,100) (*lin or exp)
+	~lpFreqSpec = ControlSpec(100, 20000, 'exp');
 	~panSpec = ControlSpec(-45, 45, 'lin'); //lin not exp
 	~audioBuss = CtkAudio.play(2, server: ~server);
 
@@ -47,10 +48,11 @@ NetAddr.langPort
     }, '/1/fader2', ~iPhone);
 	 ~decay = OSCFunc({ |msg, time, addr, recPort|
 		~note.decayTime_(~decaySpec.map(msg[1]))
-    }, '/ /1/rotary1', ~iPhone);
-	~loop = OSCFunc({ |msg, time, addr, recPort|
-		~note.loop_(~loopSpec.map(msg[1]))
-		 }, '/ /1/rotary2', ~iPhone);
+    }, '/1/rotary1', ~iPhone);
+	~lpFreq = OSCFunc({ |msg, time, addr, recPort|
+		msg.postln;
+		~note.lpFreq_(~lpFreqSpec.map(msg[1]).postln)
+		 }, '/1/rotary2');
 
 
 	/*~midiRate = OSCFunc.new({ |val, num, chan, src|
