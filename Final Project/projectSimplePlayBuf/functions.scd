@@ -1,5 +1,5 @@
 /*
-Project Title: projectSimplePlayBuf
+Project Title: projectSimplePlayBuf /project warp shuffle LAB TASK 4
 Date: Wed Jan 29 13:48:27 2025
 
 DXARTS 46x: Sound Series Tutorial
@@ -23,7 +23,10 @@ HelpBrowser.openLink("link::Tutorials/Getting Practice/ProjectRissetsBells::");
 // -------------------------
 // instantiate dictionaries
 ~myScoreFuncs = Dictionary.new;
+~myBufferFuncs = Dictionary.new;
 
+~myWTScoringFuncs = Dictionary.new;
+~myWPScoringFuncs = Dictionary.new;
 
 // -------------------------
 // add associations
