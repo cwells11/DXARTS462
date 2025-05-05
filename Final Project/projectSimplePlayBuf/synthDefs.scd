@@ -116,7 +116,7 @@ HelpBrowser.openLink("link::Tutorials/Getting Practice/ProjectSHARCWTsWPs::")
 				ampEnvSig = EnvGen.kr(
 					Env.linen(riseTime, dur - (riseTime + decayTime), decayTime),  // Env: *linen
 					levelScale: amp,
-					doneAction: Done.freeSelf
+				// doneAction: Done.freeSelf
 				);  // EnvGen (control rate)
 
 
@@ -135,7 +135,7 @@ HelpBrowser.openLink("link::Tutorials/Getting Practice/ProjectSHARCWTsWPs::")
 				// apply -linen envelope
 				// ... reuse playBufSig var
 				// NOTE: we could have just passed ampEnvSig to the level arg of Balance2
-				shuffleSig = shuffleSig * ampEnvSig;
+				shuffleSig = shuffleSig * amp;
 
 				// stereo imager
 				panSig = Balance2.ar(shuffleSig[0], shuffleSig[1], pos);  // Balance2 (audio rate)
