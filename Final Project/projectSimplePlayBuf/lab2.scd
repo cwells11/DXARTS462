@@ -14,12 +14,12 @@ MIDIIn.connectAll;
 	CtkBuffer(pathName.fullPath).load
 	};*/
 
-	~buffer = CtkBuffer("../../sounds/FOAWavedrum.wav".resolveRelative).load;
+	~buffer = CtkBuffer("../../sounds/grain_final63.wav".resolveRelative).load;
 
 	~rateSpec = ControlSpec(0.25, 4.0, 'exp'); //(changed from -100,100) (*lin or exp)
 	~panSpec = ControlSpec(-45, 45, 'lin'); //lin not exp
 	~minSpec = ControlSpec(0.1, 1.0, 'lin'); //lin not exp
-	~paxSpec = ControlSpec(1.0, 2.0, 'lin'); //lin not exp
+	~maxSpec = ControlSpec(1.0, 2.0, 'lin'); //lin not exp
 	~audioBuss = CtkAudio.play(2, server: ~server);
 
 	// ~buffer = ~buffers.choose;
@@ -60,7 +60,7 @@ MIDIIn.connectAll;
 	~hdr = HDR.new(
 		Server.default, //server
 		[0, 1], //an array of all the channels to record
-		sessionPath: "../recordings/".resolveRelative, //current folder
+		sessionPath: "../../../recordings/".resolveRelative, //current folder
 		filename: ~buffer.path.basename.splitext($.)[0],
 		headerFormat: "wav",
 		sampleFormat: "float", //also int16, int24
