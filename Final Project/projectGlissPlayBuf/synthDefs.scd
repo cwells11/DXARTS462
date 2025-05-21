@@ -32,7 +32,7 @@ HelpBrowser.openLink("link::Tutorials/Getting Practice/ProjectSHARCWTsWPs::")
 		\dxarts46x_stereoGlissPlayBuf,  // name - as Symbol
 
 		{ |dur = 1.0, gain = 0.0, riseTime = 0.01, decayTime = 0.01, rate = 1, glissSpan = 0.0, panAngle = 0,
-			loop = 0, bufnum = 0, outBus = 0|  // UGen graph function
+			loop = 0, bufnum = 0, outBus = 0, gate = 1|  // UGen graph function
 
 			// vars for UGens
 			var ampEnvSig;
@@ -51,12 +51,8 @@ HelpBrowser.openLink("link::Tutorials/Getting Practice/ProjectSHARCWTsWPs::")
 
 			// amplitude envelope
 			ampEnvSig = EnvGen.kr(
-				Env.linen(
-					riseTime,
-					(dur - (riseTime + decayTime)).clip(0.001, dur),
-					decayTime
-				),
-				//doneAction: Done.freeSelf
+				Env([0, 1, 0], [10, 10], 'sin', 1), gate,
+				doneAction: Done.freeSelf
 			) * amp;
 
 			// glissando envelope (pitch sweep)
@@ -77,7 +73,7 @@ HelpBrowser.openLink("link::Tutorials/Getting Practice/ProjectSHARCWTsWPs::")
 			);
 
 			// apply amplitude envelope
-			playBufSig = playBufSig * amp;
+			playBufSig = playBufSig * ampEnvSig;
 
 			// stereo imaging
 			panSig = Balance2.ar(playBufSig[0], playBufSig[1], pos);

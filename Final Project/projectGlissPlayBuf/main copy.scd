@@ -74,7 +74,7 @@ MIDIFunc.trace(false); // true and false
 	~hdr.record;
 });
 )
-~note.postln;
+~note.gate_(0);
 ~hdr.stop;
 ~buffers.collect(_.path)
 ~reverbNote.free
