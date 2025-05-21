@@ -21,6 +21,7 @@ MIDIIn.connectAll;
 	~minSpec = ControlSpec(0.1, 1.0, 'lin'); //lin not exp
 	~maxSpec = ControlSpec(1.0, 2.0, 'lin'); //lin not exp
 	~audioBuss = CtkAudio.play(2, server: ~server);
+	//~rate = ControlSpec(0.25, 4.0, 'exp');
 
 	// ~buffer = ~buffers.choose;
 

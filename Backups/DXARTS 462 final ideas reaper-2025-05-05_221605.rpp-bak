@@ -1,9 +1,9 @@
-<REAPER_PROJECT 0.1 "7.14/macOS-arm64" 1747258829
+<REAPER_PROJECT 0.1 "7.14/macOS-arm64" 1746508565
   <NOTES 0 2
   >
   RIPPLE 0
   GROUPOVERRIDE 0 0 0
-  AUTOXFADE 129
+  AUTOXFADE 1
   ENVATTACH 3
   POOLEDENVATTACH 0
   MIXERUIFLAGS 11 48
@@ -19,8 +19,8 @@
   PANMODE 3
   PANLAWFLAGS 3
   CURSOR 0
-  ZOOM 11.31280218898107 0 0
-  VZOOMEX 6 245
+  ZOOM 1.46721174942871 0 0
+  VZOOMEX 6 209
   USE_REC_CFG 0
   RECMODE 1
   SMPTESYNC 0 30 100 40 1000 300 0 0 1 0 0
@@ -138,7 +138,7 @@
       CHANMODE 0
       GUID {B7ACD091-1198-4C49-9657-0C6DE4F02370}
       <SOURCE WAVE
-        FILE "/Users/christawells/Documents/GitHub/recordings/grain_final63250505_211026.wav"
+        FILE "Final Project/recordings/grain_final63250505_211026.wav"
       >
     >
     <ITEM
@@ -150,7 +150,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {EF73CECB-638B-F447-B40E-A341EAE62976}
       IID 2
       NAME FOAdingtapbowlbell250505_203543.wav
@@ -160,7 +160,7 @@
       CHANMODE 0
       GUID {D7C43371-1585-684B-BB7D-E7867F23EB74}
       <SOURCE WAVE
-        FILE "/Users/christawells/Documents/GitHub/recordings/FOAdingtapbowlbell250505_203543.wav"
+        FILE "Final Project/recordings/FOAdingtapbowlbell250505_203543.wav"
       >
     >
   >
@@ -198,7 +198,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {FA2F3746-B79D-6148-9E3F-7BE60EA3E27F}
       IID 3
       NAME FOAWavedrum250505_125735.wav
@@ -208,7 +208,7 @@
       CHANMODE 0
       GUID {A8D385FB-5FB7-734B-88C7-C34FDC1142F6}
       <SOURCE WAVE
-        FILE "/Users/christawells/Documents/GitHub/recordings/FOAWavedrum250505_125735.wav"
+        FILE "Final Project/recordings/FOAWavedrum250505_125735.wav"
       >
     >
   >
@@ -246,7 +246,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {52F9E2E2-9744-8743-94E6-A2F5F1BDE5FB}
       IID 4
       NAME FOAWavedrum250505_131126.wav
@@ -256,7 +256,7 @@
       CHANMODE 0
       GUID {521925CF-A28B-3745-BE9B-F5649D500BCA}
       <SOURCE WAVE
-        FILE "/Users/christawells/Documents/GitHub/recordings/FOAWavedrum250505_131126.wav"
+        FILE "Final Project/recordings/FOAWavedrum250505_131126.wav"
       >
     >
   >
@@ -267,14 +267,14 @@
     AUTOMODE 0
     PANLAWFLAGS 3
     VOLPAN 1 0 -1 -1 1
-    MUTESOLO 0 0 0
+    MUTESOLO 1 0 0
     IPHASE 0
     PLAYOFFS 0 1
     ISBUS 0 0
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
     FIXEDLANES 9 0 0 0
-    SEL 0
+    SEL 1
     REC 0 0 1 0 0 0 0 0
     VU 2
     TRACKHEIGHT 0 0 0 0 0 0 0
@@ -294,7 +294,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {668C250A-9F01-E84D-A2A1-B2A99ABA5DA0}
       IID 5
       NAME FOAWavedrum250505_133030.wav
@@ -304,7 +304,7 @@
       CHANMODE 0
       GUID {DDFD9634-2E8E-4D4B-9909-2BFFF4E953F2}
       <SOURCE WAVE
-        FILE "/Users/christawells/Documents/GitHub/recordings/FOAWavedrum250505_133030.wav"
+        FILE "Final Project/recordings/FOAWavedrum250505_133030.wav"
       >
     >
   >
@@ -342,7 +342,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {0A0AAF3B-9E16-6642-85C0-04933AFB8C75}
       IID 6
       NAME FOAWavedrum250505_202138.wav
@@ -352,7 +352,7 @@
       CHANMODE 0
       GUID {8B26980B-C726-9847-B9B4-43FE68576414}
       <SOURCE WAVE
-        FILE "/Users/christawells/Documents/GitHub/recordings/FOAWavedrum250505_202138.wav"
+        FILE "Final Project/recordings/FOAWavedrum250505_202138.wav"
       >
     >
   >
@@ -390,7 +390,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {D9A47A10-EFDB-7E47-A2B8-B44832BF4B23}
       IID 7
       NAME FOAWavedrum250505_202331.wav
@@ -400,7 +400,7 @@
       CHANMODE 0
       GUID {D0A98350-94F5-4041-A16A-BB0BCE11222D}
       <SOURCE WAVE
-        FILE "/Users/christawells/Documents/GitHub/recordings/FOAWavedrum250505_202331.wav"
+        FILE "Final Project/recordings/FOAWavedrum250505_202331.wav"
       >
     >
   >
@@ -411,7 +411,7 @@
     AUTOMODE 0
     PANLAWFLAGS 3
     VOLPAN 1 0 -1 -1 1
-    MUTESOLO 0 0 0
+    MUTESOLO 1 0 0
     IPHASE 0
     PLAYOFFS 0 1
     ISBUS 0 0
@@ -438,7 +438,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {9DA1F7F0-322D-BF4A-896C-A1DC98ECE465}
       IID 8
       NAME FOAWavedrum250505_203519.wav
@@ -448,7 +448,7 @@
       CHANMODE 0
       GUID {9B7F28C3-272F-8F41-8A84-EAD9CB7E3D27}
       <SOURCE WAVE
-        FILE "/Users/christawells/Documents/GitHub/recordings/FOAWavedrum250505_203519.wav"
+        FILE "Final Project/recordings/FOAWavedrum250505_203519.wav"
       >
     >
   >
@@ -459,7 +459,7 @@
     AUTOMODE 0
     PANLAWFLAGS 3
     VOLPAN 1 0 -1 -1 1
-    MUTESOLO 0 0 0
+    MUTESOLO 0 2 0
     IPHASE 0
     PLAYOFFS 0 1
     ISBUS 0 0
@@ -486,7 +486,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {5E0171AE-C057-BB4D-9DD4-7F3FF3D9404D}
       IID 9
       NAME YESmonoPan_1250505_205320.wav
@@ -496,7 +496,7 @@
       CHANMODE 0
       GUID {EC2543A2-5D7E-9748-BD1D-9B82B62007A5}
       <SOURCE WAVE
-        FILE "/Users/christawells/Documents/GitHub/recordings/YESmonoPan_1250505_205320.wav"
+        FILE "Final Project/recordings/YESmonoPan_1250505_205320.wav"
       >
     >
   >
@@ -514,7 +514,7 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
     FIXEDLANES 9 0 0 0
-    SEL 1
+    SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
     TRACKHEIGHT 0 0 0 0 0 0 0
@@ -544,7 +544,7 @@
       CHANMODE 0
       GUID {800FBF6F-E8F8-F54E-AB1F-2AFE93565AC2}
       <SOURCE WAVE
-        FILE "/Users/christawells/Documents/GitHub/recordings/YFOAdingingandtoneYES_204547.wav"
+        FILE "Final Project/recordings/YFOAdingingandtoneYES_204547.wav"
       >
     >
   >
@@ -582,7 +582,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {6DE7D112-9610-DF46-8F7D-7FACA4547505}
       IID 11
       NAME YFOAdingtapbowlbell250505_203754.wav
@@ -592,7 +592,7 @@
       CHANMODE 0
       GUID {44B459A2-69CB-7641-B3EF-2A86062A63A8}
       <SOURCE WAVE
-        FILE "/Users/christawells/Documents/GitHub/recordings/YFOAdingtapbowlbell250505_203754.wav"
+        FILE "Final Project/recordings/YFOAdingtapbowlbell250505_203754.wav"
       >
     >
   >
