@@ -35,16 +35,16 @@ HelpBrowser.openLink("link::Tutorials/Getting Practice/ProjectSHARCWTsWPs::")
 		{ |dur = 1.0, gain = 0.0, riseTime = 0.01, decayTime = 0.01, rate = 1, panAngle = 0,
 			loop = 0, bufnum = 0, outBus = 0|  // UGen graph function
 
-            // vars for UGens
-            var ampEnvSig;
-            var playBufSig;
-            var panSig;
-            var outSig;
+			// vars for UGens
+			var ampEnvSig;
+			var playBufSig;
+			var panSig;
+			var outSig;
 
-            // vars for control
+			// vars for control
 			var numChannels = 1; // <-- mono buffer - must be set in the UGen graph function!
-            var amp = gain.dbamp;
-            var pos = panAngle.neg / 45;
+			var amp = gain.dbamp;
+			var pos = panAngle.neg / 45;
 
 			// ----
 			// synthesis
@@ -90,16 +90,16 @@ HelpBrowser.openLink("link::Tutorials/Getting Practice/ProjectSHARCWTsWPs::")
 		{ |dur = 1.0, gain = 0.0, riseTime = 0.01, decayTime = 0.01, rate = 1, panAngle = 0,
 			loop = 0, bufnum = 0, outBus = 0|  // UGen graph function
 
-            // vars for UGens
-            var ampEnvSig;
-            var playBufSig;
-            var panSig;
-            var outSig;
+			// vars for UGens
+			var ampEnvSig;
+			var playBufSig;
+			var panSig;
+			var outSig;
 
-            // vars for control
+			// vars for control
 			var numChannels = 2; // <-- stereo buffer - must be set in the UGen graph function!
-            var amp = gain.dbamp;
-            var pos = panAngle.neg / 45;
+			var amp = gain.dbamp;
+			var pos = panAngle.neg / 45;
 
 			// ----
 			// synthesis
@@ -243,7 +243,7 @@ HelpBrowser.openLink("link::Tutorials/Getting Practice/ProjectSHARCWTsWPs::")
 			ampEnvSig = EnvGen.kr(
 				Env.linen(riseTime, dur - (riseTime + decayTime), decayTime),  // Env: *linen
 				levelScale: amp,
-				doneAction: Done.freeSelf
+				//doneAction: Done.freeSelf
 			);  // EnvGen (control rate)
 
 
@@ -255,10 +255,10 @@ HelpBrowser.openLink("link::Tutorials/Getting Practice/ProjectSHARCWTsWPs::")
 			triggerSig = Impulse.ar(grainFreq);
 
 			// granular synthesis
-				grainBufSig = GrainBuf.ar(numChannels: numChannels, trigger: triggerSig, dur: grainDur, sndbuf: [ bufnum0, bufnum1 ], rate: wavRatio, pos: bufPosSig);
+			grainBufSig = GrainBuf.ar(numChannels: numChannels, trigger: triggerSig, dur: grainDur, sndbuf: [ bufnum0, bufnum1 ], rate: wavRatio, pos: bufPosSig);
 
 			// apply -linen envelope
-			grainBufSig = grainBufSig * ampEnvSig;
+			grainBufSig = grainBufSig * amp;
 
 			// stereo imager
 			panSig = Balance2.ar(grainBufSig[0], grainBufSig[1], pos);  // Balance2 (audio rate)
