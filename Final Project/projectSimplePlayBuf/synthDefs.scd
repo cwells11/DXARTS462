@@ -25,11 +25,11 @@ HelpBrowser.openLink("link::Tutorials/Getting Practice/ProjectSHARCWTsWPs::")
 ~myPlayBufPNotes.add(
 	SynthDef.new(
 		\dxarts46x_stereoPlayBuf,
-		{ |dur = 1.0, gain = 0.0, riseTime = 0.01, decayTime = 0.01, rate = 1, panAngle = 0,
-			loop = 0, bufnum = 0, outBus = 0, lpFreq = 1000|  // <-- Added lpFreq
+		{ |dur = 3.0, gain = 0.0, riseTime = 0.01, decayTime = 0.01, rate = 1, panAngle = 0,
+			loop = 0, bufnum = 0, outBus = 0, combFreq = 100, rq = 0.01|  // <-- Added lpFreq
 
 			var ampEnvSig, playBufSig, panSig, outSig, filteredSig;
-			var numChannels = 4;
+			var numChannels = 2;
 			var amp = gain.dbamp;
 			var pos = panAngle.neg / 45;
 
@@ -43,10 +43,10 @@ HelpBrowser.openLink("link::Tutorials/Getting Practice/ProjectSHARCWTsWPs::")
 			//playBufSig = playBufSig * ampEnvSig;
 
 			// decode to stereo
-			playBufSig = FoaDecode.ar(playBufSig, FoaDecoderMatrix.newStereo);
+			//playBufSig = FoaDecode.ar(playBufSig, FoaDecoderMatrix.newStereo);
 
 			// Apply Low-Pass Filter
-			filteredSig = LPF.ar(playBufSig, lpFreq);  // <---- Low-pass filter added
+			filteredSig = CombPZC.ar(playBufSig, freq: combFreq, rq: rq);  //
 
 			panSig = Balance2.ar(filteredSig[0], filteredSig[1], pos);
 			outSig = panSig;

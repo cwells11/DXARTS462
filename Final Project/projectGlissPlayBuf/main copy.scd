@@ -17,7 +17,7 @@ MIDIFunc.trace(false); // true and false
 ~server.options_(ServerOptions.new.numOutputBusChannels_(16).memSize_(2**21));
 ~server.waitForBoot({
 
-	~buffer = CtkBuffer("../../sounds/Marimba.roll.ff.Ab3.stereo.aif".resolveRelative).load;
+	~buffer = CtkBuffer("../../sounds/OutsideBirds 001.WAV".resolveRelative).load;
 
 	// Control specs
 	~rateSpec = ControlSpec(0.25, 4.0, 'exp');

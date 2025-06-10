@@ -14,8 +14,8 @@ MIDIIn.connectAll;
 	CtkBuffer(pathName.fullPath).load
 	};
 
-	~buffer0 = CtkBuffer("../../sounds/dxarts461a_Wi25_group_3longring.wav".resolveRelative, channels: 0).load;
-	~buffer1 = CtkBuffer("../../sounds/dxarts461a_Wi25_group_3longring.wav".resolveRelative, channels: 1).load;
+	~buffer0 = CtkBuffer("../../sounds/FOAwaveintoding.wav".resolveRelative, channels: 0).load;
+	~buffer1 = CtkBuffer("../../sounds/FOAwaveintoding.wav".resolveRelative, channels: 1).load;
 
 	~freqSpec = ControlSpec(440, 400, 'exp'); //(changed from -100,100) (*lin or exp)
 	~panSpec = ControlSpec(-45, 45, 'lin'); //lin not exp
